@@ -1,5 +1,6 @@
 import { Filme } from '../interfaces';
 import React, { useState,  } from 'react';
+import Filmes from './filmes';
 
 interface IndexProps {
   filmes: Filme[];
@@ -17,6 +18,7 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
   const selecaoFilmes = filmes.slice(0, 5);
 
   return (
+    <div>
     <div className="mainContainer">
       <div className='descricao'>
         <img src={info? info.imagens_background : 'img/olharParaiso2.webp'}  />
@@ -40,7 +42,12 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
           </div>
         ))}
       </div>
+     
     </div>
+    <Filmes filmes={filmes}/>
+    </div>
+
+     
   );
 };
 

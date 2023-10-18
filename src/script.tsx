@@ -7,7 +7,8 @@ function buscarFilmes() {
       return response.json();
     })
     .then(data => {
-      return data; // Retornando os dados dos filmes
+      return data; 
+     
     })
     .catch(error => {
       console.error('Erro ao buscar filmes:', error);

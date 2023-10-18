@@ -11,7 +11,7 @@ interface Props {
 const Filmes: React.FC<Props> = ({ filmes }) => {
   return(
     <div className="filmeContainer"> 
-    <h2>Classicos</h2>
+    <h2 className="titulo">Classicos</h2>
 
         <FilmesCards  filmes={filmes}/>
 

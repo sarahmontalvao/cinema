@@ -9,15 +9,16 @@ import Index from './componentes/index.tsx'
 import Perfil from './componentes/perfil'
 import Login from './componentes/login';
 import Favoritos from './componentes/favoritos';
-import Filmes from './componentes/filmes';
+
+import Result from './componentes/result';
 import './App.css'
+
 
 
 function App() {
 
   const [isAuthenticated, setIsAuthenticated]: [boolean, React.Dispatch<React.SetStateAction<boolean>>] = useState(false);
 
-  
   const [filmes, setFilmes] = useState([])
 
   useEffect(()=>{
@@ -35,7 +36,7 @@ function App() {
    
     <div className='app'>
        <Router>
-        <Header />
+        <Header filmes={filmes}/>
           <Routes>
             <Route path="/" element={<Index  filmes={filmes}/>} />
 
@@ -46,11 +47,12 @@ function App() {
             element={<Login setIsAuthenticated={setIsAuthenticated} />} />
             
             <Route path="/favoritos" element={<Favoritos />} />
+
+            <Route path="/result" element={<Result filmes={filmes} />} />
+
           </Routes>
       </Router>
-      <Filmes filmes={filmes}/>
-
-      {/* talvez adicionar o map aqui */}
+       
     
     </div>
        
