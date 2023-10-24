@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { Filme } from '../interfaces';
-import FilmesCards from './filmesCard';
+import FilmesCards from '../componentes/filmesCard';
 
 interface FilmesCardsProps {
     filmes: Filme[];

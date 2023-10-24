@@ -27,7 +27,7 @@ const Perfil =   ({ isAuthenticated }: { isAuthenticated: boolean }) => {
 
           
                 <Link to="/login"><button className='loginBtn' id='login'>Fazer login</button> </Link> 
-            <button className='loginBtn' id='cadastro'>Cadastrar</button>
+                <Link to="/cadastro"> <button className='loginBtn' id='cadastro'>Cadastrar</button> </Link>
             </div>
       
 

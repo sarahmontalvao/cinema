@@ -1,8 +1,9 @@
-import FilmesCards from "./filmesCard";
+import FilmesCards from "../componentes/filmesCard";
 
 import { Filme } from '../interfaces';
 
 import '../App.css'
+
 
 interface Props {
   filmes: Filme[];
@@ -14,6 +15,7 @@ const Filmes: React.FC<Props> = ({ filmes }) => {
     <h2 className="titulo">Classicos</h2>
 
         <FilmesCards  filmes={filmes}/>
+       
 
     </div>
 )

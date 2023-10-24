@@ -5,13 +5,15 @@ import buscarFilmes from "./script.tsx";
 
 
 import Header from './componentes/header'
-import Index from './componentes/index.tsx'
-import Perfil from './componentes/perfil'
-import Login from './componentes/login';
-import Favoritos from './componentes/favoritos';
+import Index from './pages/index.tsx'
+import Perfil from './pages/perfil.tsx'
+import Login from './pages/login.tsx';
+import Favoritos from './pages/favoritos.tsx';
+import InfoPage from './pages/infoPage.tsx';
 
-import Result from './componentes/result';
+import Result from './pages/result.tsx';
 import './App.css'
+import Cadastro from './pages/cadastro.tsx';
 
 
 
@@ -45,10 +47,16 @@ function App() {
             
             <Route path="/login" 
             element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+
+            <Route path="/cadastro" 
+            element={<Cadastro setIsAuthenticated={setIsAuthenticated} />} />
+            
             
             <Route path="/favoritos" element={<Favoritos />} />
 
             <Route path="/result" element={<Result filmes={filmes} />} />
+
+            <Route path="/infoPage/:id" element={<InfoPage  />} />
 
           </Routes>
       </Router>
