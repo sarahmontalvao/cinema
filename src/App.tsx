@@ -1,20 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import buscarFilmes from "./script.tsx";
-
-
 
 import Header from './componentes/header'
 import Index from './pages/index.tsx'
 import Perfil from './pages/perfil.tsx'
 import Login from './pages/login.tsx';
-import Favoritos from './pages/favoritos.tsx';
+import Favs from './pages/favs.tsx';
 import InfoPage from './pages/infoPage.tsx';
-
 import Result from './pages/result.tsx';
-import './App.css'
 import Cadastro from './pages/cadastro.tsx';
 
+import './App.css'
 
 
 function App() {
@@ -52,7 +50,7 @@ function App() {
             element={<Cadastro setIsAuthenticated={setIsAuthenticated} />} />
             
             
-            <Route path="/favoritos" element={<Favoritos />} />
+            <Route path="/favs" element={<Favs />} />
 
             <Route path="/result" element={<Result filmes={filmes} />} />
 

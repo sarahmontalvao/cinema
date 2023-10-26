@@ -58,7 +58,7 @@ const Header : React.FC<Props> = ({ filmes }) => {
   )}
   
     </li>
-        <Link to="/favoritos"><li><FontAwesomeIcon icon={faHeart} /></li> </Link>
+        <Link to="/favs"><li><FontAwesomeIcon icon={faHeart} /></li> </Link>
         <Link to="/perfil"> <li ><FontAwesomeIcon icon={faUser} /></li></Link>
         
       </ul>
