@@ -1,7 +1,6 @@
 import { Filme } from '../interfaces';
 import { useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faStar,  } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const InfoPage= () => {
@@ -10,10 +9,9 @@ const InfoPage= () => {
 
     const filmeInfo = state.info;
   
-   
-  
-  return(
-    <div className='infoContainer'> 
+   return(
+    <div className='infoContainer'>
+    <div className='infoCard'> 
 
 <div className='info'>
 <img src={`/${filmeInfo.imagem_url}`} alt={filmeInfo.titulo} />
@@ -28,6 +26,7 @@ const InfoPage= () => {
 </div>
 
 <p className='desc'>{filmeInfo.descricao}</p>
+    </div>
     </div>
 )
 

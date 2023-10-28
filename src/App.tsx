@@ -11,6 +11,7 @@ import Favs from './pages/favs.tsx';
 import InfoPage from './pages/infoPage.tsx';
 import Result from './pages/result.tsx';
 import Cadastro from './pages/cadastro.tsx';
+import Footer from './componentes/footer.tsx';
 
 import './App.css'
 
@@ -58,6 +59,7 @@ function App() {
 
           </Routes>
       </Router>
+      <Footer/>
        
     
     </div>

@@ -155,7 +155,7 @@ font-size: 1.2em;
 
 
 .perfilContainer{
-  height: calc(100vh - 200px);
+  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,7 +298,6 @@ gap: 3em;
 }
 
 .filmeContainer{
-height: 100vh;
 width: 100vw;
 top: 100vh;
 padding: 20px 0px;
@@ -440,17 +439,22 @@ color:#364156;
  display: flex;
  align-items: center;
  justify-content: center;
+ align-items: center;
 }
-
 .infoContainer{
+  min-height: calc(100vh - 100px);
+  
+}
+.infoCard{
   display: flex;
   flex-direction: column;
   justify-content: center;
  padding: 10px 100px;
- margin: 0 200px ;
- height: calc(100vh - 200px);
+ margin: 0 auto ;
+ min-height: calc(100vh - 200px);
+ width: 80%;
  background-color:#FFF0DB;
- border: dashed 25px #011638;
+ border: dashed 25px #0A1B36;
 }
 
 .infoContainer img{
@@ -461,16 +465,114 @@ height: 20em;
 .info{
   display: flex;
   align-items: center;
-
   gap: 5em;
   margin-bottom: 3%;
 }
 
 .details{
   font-size: 2em;
-  color: #011638;
+  color: #0A1B36;
 }
 .desc{
   font-size: 1.1em;
   line-height: 2rem;
+}
+
+.footerContainer{
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #0A1B36;
+  color: #e6e5e5;
+  border-top: 20px dashed;
+  flex-wrap: wrap;
+}
+
+.footerContainer .titulo{
+  font-size: 1em;
+}
+.footerContainer ul li{
+list-style: none;
+line-height: 1.8em;
+}
+.footerContainer ul li a{
+  color: white;
+  text-decoration: none;
+  }
+
+.footerContainer img{
+  height: 25vh;
+}
+
+.FooterAbout {
+  width: 30%;
+  padding: 50px;
+}
+
+.FooterAbout a:hover{
+  color: #EFA00B;
+}
+
+.copyRight{
+  height: 60px;
+  width: 100vw;
+  flex-basis: 100%;
+  background-color: #364156;
+  border-top: dashed 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background:#364156;
+  padding: 0px 150px ;
+  border-radius: 8px;
+  width: 70%;
+  height: 70%;
+  overflow: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
+.popup-content button{
+  background-color: #E83151;
+  min-height: 50px;
+  border: none;
+  color: white;
+}
+.popup-content p {
+  margin: 20px 0;
+  text-indent: 20px;
+  
+}
+
+.popup-content h3 {
+  margin-top: 40px;
+  color: #EFA00B;
+  font-size: 2em;
+}
+
+
+.popup-content button:hover{
+  background-color:white;
+  height: 50px;
+  border: none;
+  color:#E83151;
 }
