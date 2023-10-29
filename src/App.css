@@ -203,6 +203,22 @@ font-size: 6em;
  
 }
 
+.logOutBotton{
+  height: 40px;
+  width: 130px;
+  background-color: #5e5d5d;
+  border: none;
+  border-radius: 5%;
+  font-size: 1.1em;
+  color: white;
+}
+
+.logOutBotton:hover{
+  background-color: #3f3d3d;
+  
+  color: white;
+}
+
 
 .codigo{
   width: 20vw;
@@ -228,7 +244,7 @@ font-size: 6em;
   cursor: pointer;
 }
 .dados button:hover{
-  background-color: #3f3d3d;
+  background-color: #EFA00B;
   color: #ffffff;
 }
 

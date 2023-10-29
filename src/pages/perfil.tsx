@@ -1,7 +1,28 @@
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
 
 import '/src/App.css'
-import { Link } from 'react-router-dom';
-const Perfil =   ({ isAuthenticated }: { isAuthenticated: boolean }) => {
+
+const Perfil: React.FC<{ isAuthenticated: boolean; setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>> }> = ({ isAuthenticated, setIsAuthenticated }) => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkAuthCookie = () => {
+      const isAuthenticated = Cookies.get('auth') === 'true';
+      setIsAuthenticated(isAuthenticated);
+    };
+
+    checkAuthCookie();
+  }, [setIsAuthenticated]);
+
+  const handleLogout = () => {
+   
+    Cookies.remove('auth');
+    setIsAuthenticated(false);
+  };
 
   if(!isAuthenticated){
   return (
@@ -58,17 +79,19 @@ const Perfil =   ({ isAuthenticated }: { isAuthenticated: boolean }) => {
         
           <h1>Olá cadastrado</h1>
 
-          <button  className='loginBtn'>
+          <button  className='loginBtn' onClick={() => navigate('/favs')}>
             ver seus favoritos
           </button>
-         
+          <button className='logOutBotton'
+          onClick={handleLogout}>Sair
+          </button>
         
      
       </div>
 
 
   <div className='codigo'>
-      <img src="img/barras(1).png" alt="" />
+  <img src="img/barras.png" alt="" />
   </div>
 </div>
 );}}

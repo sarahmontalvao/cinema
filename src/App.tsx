@@ -42,7 +42,7 @@ function App() {
             <Route path="/" element={<Index  filmes={filmes}/>} />
 
             <Route path="/perfil" 
-            element={<Perfil isAuthenticated={isAuthenticated}/>} />
+            element={<Perfil isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} />
             
             <Route path="/login" 
             element={<Login setIsAuthenticated={setIsAuthenticated} />} />
