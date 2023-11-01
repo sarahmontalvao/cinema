@@ -21,13 +21,13 @@ function Footer(){
 
 return (
 <footer className="footerContainer">
-<div  className="FooterAbout">
+<div  className="FooterAbout one">
     <h4 className="titulo">Sobre o nosso cinema</h4>
     <ul>
     <li>Fundado em 1981</li>
-    <li>Orgulhosamente apresentando filmes premiados em nosso acervo.</li>
-    <li>Diversos eventos em datas comemorativas</li>
-    <li>Transformando ocasiões especiais em experiências inesquecíveis</li>
+    <li>Filmes premiados em nosso acervo.</li>
+    <li>Eventos em datas comemorativas</li>
+  
     </ul>
 
 </div>
@@ -35,7 +35,7 @@ return (
    <a href="#"><img src="../img/tickets-logo.png" alt="cinema logo" />
    </a> 
 </div>
-<div className="FooterAbout">
+<div className="FooterAbout ">
 <h4 className="titulo">Sobre o nosso cinema</h4>
 <ul>
           <li><a  onClick={() => setPopupType("sala")}>Conheça nossas salas</a></li>

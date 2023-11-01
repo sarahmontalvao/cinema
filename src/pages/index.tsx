@@ -10,6 +10,9 @@ interface IndexProps {
 const Index: React.FC<IndexProps> = ({ filmes }) => {
   const [info, setInfo] = useState<Filme | null>(filmes[1]);
   const [filmeClicadoId, setFilmeClicadoId] =  useState<string | number>('');
+  const [qtdFilm, setQtdFilm] = useState< number> (5)
+
+
 
   useEffect(() => {
     if (filmes.length > 0) {
@@ -19,6 +22,34 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
     }
   }, [filmes]);
 
+  useEffect(() =>{
+
+    const ajustarSelecao = () =>{
+      const width = window.innerWidth;
+      
+      if(width > 1200){
+        setQtdFilm(5)
+      }
+      else if (width > 1000){
+        setQtdFilm(4)
+      }else if(width > 720){
+        setQtdFilm(3)
+      }
+      
+      else{
+        setQtdFilm(2)
+      }
+    }
+
+    window.addEventListener('resize', ajustarSelecao )
+
+    ajustarSelecao();
+
+    return () => {
+      window.removeEventListener('resize', ajustarSelecao)
+    }
+  }, [qtdFilm]);
+
   const mudarFilme = (filme: Filme) => {
     setInfo(filme);
     setFilmeClicadoId(filme.id); 
@@ -26,7 +57,7 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
 
   
 
-  const selecaoFilmes = filmes.slice(0, 5);
+  const selecaoFilmes = filmes.slice(0, qtdFilm);
 
   return (
     <div>
@@ -55,7 +86,7 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
       </div>
      
     </div>
-    <Filmes filmes={filmes}/>
+    <Filmes filmes={filmes} />
     </div>
 
      

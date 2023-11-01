@@ -47,8 +47,8 @@ const Perfil: React.FC<{ isAuthenticated: boolean; setIsAuthenticated: React.Dis
                 <p>Faça login ou se cadastre para ter uma melhor experiencia</p>
 
           
-                <Link to="/login"><button className='loginBtn' id='login'>Fazer login</button> </Link> 
-                <Link to="/cadastro"> <button className='loginBtn' id='cadastro'>Cadastrar</button> </Link>
+                <Link to="/login"><button className='loginBtn' >Fazer login</button> </Link> 
+                <Link to="/cadastro"> <button className='loginBtn'>Cadastrar</button> </Link>
             </div>
       
 
@@ -77,7 +77,7 @@ const Perfil: React.FC<{ isAuthenticated: boolean; setIsAuthenticated: React.Dis
 
           </div>
         
-          <h1>Olá cadastrado</h1>
+          <h1>Olá, cadastrado</h1>
 
           <button  className='loginBtn' onClick={() => navigate('/favs')}>
             ver seus favoritos

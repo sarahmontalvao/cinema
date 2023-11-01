@@ -28,6 +28,7 @@ interface LoginProps {
       checkAuthCookie();
   }, [setIsAuthenticated, navigate]); 
 
+  const [isLoading, setIsLoading] = useState(false); 
   
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -41,6 +42,8 @@ interface LoginProps {
         formData.append('password', password);
       
         try{
+
+          setIsLoading(true);
         let response = await fetch('http://localhost/cinema/login.php', {
           method: 'POST',
           body: formData ,
@@ -69,6 +72,8 @@ interface LoginProps {
       }catch(error){
         console.error('Erro ao enviar solicitação:', error);
         alert('Erro ao enviar solicitação. Por favor, verifique sua conexão e tente novamente.');
+      }finally {
+        setIsLoading(false); 
       }
     }else {
       alert('Por favor, preencha todos os campos.');
@@ -80,7 +85,8 @@ interface LoginProps {
       <div>
        
        <form  ref={formRef} onSubmit={handleSubmit} className='formLogin'>
-       
+       {isLoading && <div>Carregando...</div>}
+
         <h3> Email:</h3>
         <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='digite seu e-mail'/>
 

@@ -34,7 +34,7 @@ body{
   height: 100px;
   width: 100vw;
   z-index: 5;
-  color: white;
+  color: #EBEBEB;
 
 }
 .logo img{
@@ -60,7 +60,7 @@ body{
 }
 
 .menu a{
-  color: white;
+  color: #EBEBEB;
 }
 
 .menu ul li:hover{
@@ -74,7 +74,6 @@ body{
   width: 100vw;
   display: flex;
   flex-direction: column;
-  
 }
 
 
@@ -87,7 +86,8 @@ body{
   flex-direction: column;
   justify-content: center;
   gap: 0.9em;
-  color: white;
+  color: #EBEBEB;
+  
 }
 
 .descText{
@@ -119,12 +119,12 @@ font-size: 1.2em;
   border-radius: 13px;
   border: none;
   font-size: 1.2em;
-  color: white;
+  color: #EBEBEB;
   margin: 20px 0;
 }
 
 .infoPage:hover{
-  background-color: white;
+  background-color: #EBEBEB;
   color: #E83151;
 }
 
@@ -159,6 +159,7 @@ font-size: 1.2em;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 3em;
  
 }
 
@@ -168,98 +169,95 @@ font-size: 1.2em;
   width: 150px;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
-  margin-bottom: 15px;
   background-image: url(img/perfil.png);
   background-size: cover;
 }
 
 .cinemaNome{
-width: 20vw;
+width: 25vh;
 height: 75vh;
-background-color: white;
-z-index: -1;
-border-right:60px solid  #364156;;
+background-color: #EBEBEB;
 display: flex;
-  align-items: center;
-  justify-content: center;
+align-items: center;
+justify-content: center;
 }
 
 .cinemaNome h2{
 rotate: -90deg;
-font-size: 6em;
+font-size: 5rem;
 }
 
 .dados{
   display: flex;
   flex-direction: column;
-  border-top: 100px  solid  #364156;;
-  border-bottom: 100px  solid  #364156;;
+  height: 75vh;
   align-items: center;
   justify-content: center;
   gap: 1em;
-  width: 60vw;
-  height: 100vh;
-  background-color: #e6e5e5;
+  width: 50vw;
+  background-color: #EBEBEB;
  
 }
 
 .logOutBotton{
   height: 40px;
-  width: 130px;
+  width: 40%;
   background-color: #5e5d5d;
   border: none;
-  border-radius: 5%;
+  border-radius: 10px;
   font-size: 1.1em;
-  color: white;
+  color: #EBEBEB;
 }
 
 .logOutBotton:hover{
   background-color: #3f3d3d;
   
-  color: white;
+  color: #EBEBEB;
 }
 
 
 .codigo{
-  width: 20vw;
+  width: 25vh;
   height: 75vh;
-  background-color: white;
+  background-color: #EBEBEB;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left:60px solid #364156 ;
+ 
   
  
 }
 
 .codigo img{
-  max-width: 80%;
+  height: 90%;
+  width: 70%;
+  object-fit: cover;
 }
 
 
 
-
-
-.dados button{
-  cursor: pointer;
+.dados p{
+text-align: center;
 }
-.dados button:hover{
+
+
+.dados .loginBtn:hover{
   background-color: #EFA00B;
   color: #ffffff;
 }
 
 
-
 .loginBtn{
   height: 50px;
-  width: 300px;
+  cursor: pointer;
+  width: 250px;
   background-color:#4F101A;
   border: none;
   font-size: 1.5em;
   color: #f8f8f8;
   letter-spacing: 1px;
   border-radius: 10px;
-  cursor: pointer;
+  
 }
 
 
@@ -267,7 +265,6 @@ font-size: 6em;
   height:calc(100vh - 100px);
   width: 100vw;
   top: 0;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -293,8 +290,6 @@ font-size: 6em;
 
 .favContainer{
   width: 100vw;
- 
-  
  display: flex;
 flex-direction: column;
 flex-wrap: wrap;
@@ -315,10 +310,6 @@ gap: 3em;
 
 .filmeContainer{
 width: 100vw;
-top: 100vh;
-padding: 20px 0px;
-
-
 
 }
 
@@ -327,18 +318,18 @@ padding: 20px 0px;
   font-size: 3em;
   text-transform: uppercase;
   justify-content: center;
-  color: white;
+  color: #EBEBEB;
   
   padding: 20px 0;
-  border-bottom: 5px  dashed white;
-  border-top: 5px  dashed white;
+  border-bottom: 5px  dashed #EBEBEB;
+  border-top: 5px  dashed #EBEBEB;
 }
 
 .FilmesCardsContainer{
 padding:50px 140px ;
  display: flex;
  flex-wrap: wrap;
- justify-content: left;
+ justify-content: center;
  align-items: center;
  gap: 3em;
   
@@ -348,6 +339,7 @@ padding:50px 140px ;
 background-color:#0a1b36;
 height: 30em;
 width: 15em;
+min-width: 15em;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -397,7 +389,7 @@ color:#364156;
 
   .filmeCard h4{
   font-size: 1.2em;
-  color: white;
+  color: #EBEBEB;
  }
 
 
@@ -484,7 +476,9 @@ height: 20em;
   gap: 5em;
   margin-bottom: 3%;
 }
-
+.infoCard{
+  padding: 3%;
+}
 .details{
   font-size: 2em;
   color: #0A1B36;
@@ -513,16 +507,16 @@ list-style: none;
 line-height: 1.8em;
 }
 .footerContainer ul li a{
-  color: white;
+  color: #EBEBEB;
   text-decoration: none;
   }
 
 .footerContainer img{
-  height: 25vh;
+  height: 250px;
 }
 
 .FooterAbout {
-  width: 30%;
+  min-width: 30%;
   padding: 50px;
 }
 
@@ -555,7 +549,7 @@ line-height: 1.8em;
 
 .popup-content {
   background:#364156;
-  padding: 0px 150px ;
+  padding: 0px 8% ;
   border-radius: 8px;
   width: 70%;
   height: 70%;
@@ -571,7 +565,7 @@ line-height: 1.8em;
   background-color: #E83151;
   min-height: 50px;
   border: none;
-  color: white;
+  color: #EBEBEB;
 }
 .popup-content p {
   margin: 20px 0;
@@ -587,8 +581,193 @@ line-height: 1.8em;
 
 
 .popup-content button:hover{
-  background-color:white;
+  background-color:#EBEBEB;
   height: 50px;
   border: none;
   color:#E83151;
 }
+
+.moreMovies{
+  color: #e6e5e5;
+  width: 100vw;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0px 4px 39px 0px #0A1B36;
+  margin-bottom: 50px;
+}
+
+.moreMovies:hover{
+  box-shadow: 0px 4px 39px 0px #e6e5e5;
+}
+
+
+@media screen and (max-width: 950px) {
+  .footerContainer img{
+    height: 150px;
+  }
+  .info{
+    gap: 1em;
+  }
+  .details {
+      font-size: 1.3em;
+      margin: 0;
+  }
+  .info img{
+    height: 200px;
+  }
+  .popup-content{
+    padding: 10px;
+  }
+  
+}
+
+
+@media screen and (max-width: 800px) {
+  .footerContainer img{
+    display: none;
+  }
+
+  .footerContainer{
+    justify-content: center;
+    text-align: center;
+    
+  }
+  .cinemaNome,.codigo{
+  width: 15vw;
+ }
+  .one{
+    display: none;
+  }
+  .selecao img{
+    height: 20vh;
+  }
+  .selecao img:hover{
+    height: 25vh;
+  }
+  .cinemaNome h2{
+    font-size: 3em;
+    }
+    .loginBtn{
+      font-size: 1em;
+      width: 140px;
+    }
+}
+
+
+@media screen and (max-width: 610px) {
+ .menu{
+  padding: 5%;
+ }
+
+ .descText{
+  padding: 10% ;
+  height: 50vh;
+ }
+ .selecao{
+  bottom: 0;
+ }
+ .descricao{
+  margin-top: 30px;
+  height: 55vh;
+ }
+ .perfilContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+ 
+}
+
+.cinemaNome{
+  min-width: 85vw;
+  height: 20vh;
+  border-right: none;
+
+  }
+  
+  .cinemaNome h2{
+  rotate: 0deg;
+  max-width: 90%;
+  max-height: 90%;
+  
+  }
+
+  .dados{
+    padding: 10px;
+    height: 50vh;
+    width: 85vw;
+    gap: 1em;
+    border: 15px  dashed #0a1b36;
+   
+  }
+
+  .codigo{
+    min-width: 85vw;
+    height: 20vh;
+    border-left:none ;
+    margin-bottom: 30px;
+    
+  }
+  .codigo::before {
+    content: "CineSala"; 
+    font-size: 3em;
+    font-weight: bold;
+  }
+  
+
+  
+  .codigo img{
+   display: none;
+   
+  }
+
+
+ .foto{
+  height: 100px;
+  width: 100px;
+ }
+ .dados h1{
+  font-size: 1.5em;
+ }
+
+  .FilmesCardsContainer{
+    padding:50px 60px ;
+
+    }
+
+.formLogin input{
+  width: 80%;
+  
+}
+
+.details {
+  font-size: 1em;
+}
+.info img{
+height: 140px;
+}
+.infoCard{
+ border: dashed 15px #0A1B36;
+ min-width: 280px;
+}
+.search-container {
+  width: 210px;
+  
+}
+.perfil{
+  gap: 1em;
+}
+
+.popup-content .titulo{
+  margin-top: 700px;
+}
+.popup-content .adress{
+  margin-top: 0px;
+}
+
+
+
+}
+
+
+
