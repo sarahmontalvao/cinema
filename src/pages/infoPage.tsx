@@ -14,7 +14,7 @@ const InfoPage= () => {
     <div className='infoCard'> 
 
 <div className='info'>
-<img src={`/${filmeInfo.imagem_url}`} alt={filmeInfo.titulo} />
+<img src={`${filmeInfo.imagem_url}`} alt={filmeInfo.titulo} />
 
 <div className='details'>
   <h1>{filmeInfo.titulo}</h1>

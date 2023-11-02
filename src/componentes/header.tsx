@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faMagnifyingGlass, faUser, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faMagnifyingGlass, faUser, } from '@fortawesome/free-solid-svg-icons';
 import { Filme } from '../interfaces';
 
 
@@ -15,7 +15,7 @@ const Header : React.FC<Props> = ({ filmes }) => {
 
   const [searchClick, setSearchClick] = useState(false)
   const [searchText, setSearchText] = useState('')
-  const [result, setResult] = useState<Filme[]>([]);
+  const [, setResult] = useState<Filme[]>([]);
   const navigate = useNavigate(); 
 
   const handleClick = () =>{

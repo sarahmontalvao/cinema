@@ -290,6 +290,7 @@ text-align: center;
 
 .favContainer{
   width: 100vw;
+  min-height: calc(100vh - 100px);
  display: flex;
 flex-direction: column;
 flex-wrap: wrap;
