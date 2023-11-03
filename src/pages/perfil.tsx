@@ -53,7 +53,7 @@ const Perfil: React.FC<{ isAuthenticated: boolean; setIsAuthenticated: React.Dis
       
 
         <div className='codigo'>
-        <img src="img/barras.png" alt="" />
+        <img src="./img/barras.png" alt="" />
         
         </div>
     </div>

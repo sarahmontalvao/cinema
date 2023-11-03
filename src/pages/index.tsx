@@ -70,7 +70,7 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
 
         <div className='descText'>
         <h1>{info?.title }</h1>
-        <h3 className='categoria'>{info?.release_date }</h3>
+        <h3 className='categoria'>{ info?.release_date.toString().slice(0,4)}</h3>
         <p className='filmeDesc'>{ info?.overview.slice(0, info?.overview.length / 2)}...</p>
             <ButtonInfo filme={info} />
             </div>
