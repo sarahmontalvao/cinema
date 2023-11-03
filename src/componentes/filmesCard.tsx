@@ -46,7 +46,7 @@ const FilmesCards: React.FC<FilmesCardsProps> = ({ filmes }) => {
         <div key={filme.id} className="filmeCard">
           <img src={imageUrl + filme.poster_path} alt="" />
           <h3>{filme.title}</h3>
-          <h4>{filme.release_date}</h4>
+          <h4>{filme.release_date.toString().slice(0,4)}</h4>
           <div className="iconsCards">
             <p
               onClick={() => favClick(filme)}

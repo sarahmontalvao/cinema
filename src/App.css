@@ -167,7 +167,7 @@ font-size: 1.2em;
   width: 150px;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
-  background-image: url(/img/perfil.png);
+  background-image: url(img/perfil.png);
   background-size: cover;
 }
 
