@@ -20,8 +20,9 @@ const Result: React.FC<FilmesCardsProps>  = () => {
   return (
     <div>
       <h1 className='titulo'>Resultados encontrados</h1>
+      <div className='resultContainer'>
       <FilmesCards filmes={results} /> 
-      
+      </div>
     </div>
   );
 };

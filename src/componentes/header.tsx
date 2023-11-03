@@ -23,7 +23,7 @@ const Header : React.FC<Props> = ({ filmes }) => {
   }
 
   const handleSearch = ()=>{
-   const resultado = filmes.filter(filmes => filmes.titulo.toLowerCase().includes(searchText.toLowerCase()))
+   const resultado = filmes.filter(filmes => filmes.title.toLowerCase().includes(searchText.toLowerCase()))
   
    setResult(resultado)
    navigate('/result', { state: { results: resultado } }); 

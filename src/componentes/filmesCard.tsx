@@ -9,9 +9,13 @@ interface FilmesCardsProps {
 }
 
 const FilmesCards: React.FC<FilmesCardsProps> = ({ filmes }) => {
+
+  const imageUrl =import.meta.env.VITE_IMG;
+
   const [favList, setFavList] = useState<Filme[]>(() => {
     const storage = localStorage.getItem('favs');
     return storage ? JSON.parse(storage) : [];
+
   });
 
   const [click, setClick] = useState<number | null>(null);
@@ -37,11 +41,12 @@ const FilmesCards: React.FC<FilmesCardsProps> = ({ filmes }) => {
 
   return (
     <div className="FilmesCardsContainer">
-      {filmes.map((filme) => (
+       {filmes.length === 0 && <p>Carregando...</p>}
+      {filmes.length > 0 && filmes.map((filme) => (
         <div key={filme.id} className="filmeCard">
-          <img src={filme.imagem_url} alt="" />
-          <h3>{filme.titulo}</h3>
-          <h4>{filme.genero}</h4>
+          <img src={imageUrl + filme.poster_path} alt="" />
+          <h3>{filme.title}</h3>
+          <h4>{filme.release_date}</h4>
           <div className="iconsCards">
             <p
               onClick={() => favClick(filme)}

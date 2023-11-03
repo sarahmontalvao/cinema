@@ -7,6 +7,8 @@ const InfoPage= () => {
     const location = useLocation();
     const state = location.state as {info:Filme};
 
+    const imageUrl =import.meta.env.VITE_IMG;
+
     const filmeInfo = state.info;
   
    return(
@@ -14,18 +16,19 @@ const InfoPage= () => {
     <div className='infoCard'> 
 
 <div className='info'>
-<img src={`${filmeInfo.imagem_url}`} alt={filmeInfo.titulo} />
+
+<img src={`${imageUrl}${filmeInfo.poster_path}`} alt={filmeInfo.title} />
 
 <div className='details'>
-  <h1>{filmeInfo.titulo}</h1>
+  <h1>{filmeInfo.title}</h1>
   <p>{filmeInfo.diretor}</p>
- <p>{filmeInfo.ano}</p>
+ <p>{filmeInfo.release_date}</p>
 
 </div> 
 
 </div>
 
-<p className='desc'>{filmeInfo.descricao}</p>
+<p className='desc'>{filmeInfo.overview}</p>
     </div>
     </div>
 )

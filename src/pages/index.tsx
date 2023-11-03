@@ -7,10 +7,15 @@ interface IndexProps {
   filmes: Filme[];
 }
 
+
 const Index: React.FC<IndexProps> = ({ filmes }) => {
+
+
   const [info, setInfo] = useState<Filme | null>(filmes[1]);
   const [filmeClicadoId, setFilmeClicadoId] =  useState<string | number>('');
   const [qtdFilm, setQtdFilm] = useState< number> (5)
+
+  const imageUrl =import.meta.env.VITE_IMG;
 
 
 
@@ -32,7 +37,7 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
       }
       else if (width > 1000){
         setQtdFilm(4)
-      }else if(width > 720){
+      }else if(width > 700){
         setQtdFilm(3)
       }
       
@@ -55,7 +60,6 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
     setFilmeClicadoId(filme.id); 
   };
 
-  
 
   const selecaoFilmes = filmes.slice(0, qtdFilm);
 
@@ -63,14 +67,12 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
     <div>
     <div className="mainContainer">
       <div className='descricao'>
-      <img src={info?.imagens_background} alt={info?.titulo}  />
 
         <div className='descText'>
-        <h1>{info?.titulo }</h1>
-        <h3 className='categoria'>{info?.genero }</h3>
-            <p className='filmeDesc'>{info?.descricao}</p>    
-            
-           <ButtonInfo filme={info} />
+        <h1>{info?.title }</h1>
+        <h3 className='categoria'>{info?.release_date }</h3>
+        <p className='filmeDesc'>{ info?.overview.slice(0, info?.overview.length / 2)}...</p>
+            <ButtonInfo filme={info} />
             </div>
       </div>
 
@@ -80,7 +82,7 @@ const Index: React.FC<IndexProps> = ({ filmes }) => {
           onClick={() => mudarFilme(filme)}
           className={filmeClicadoId === filme.id ? 'filmeClicado' : ''}
         >
-            <img src={filme.imagem_url} alt={filme.titulo} className='filme' />
+            <img src={imageUrl + filme.poster_path}alt={filme.title} className='filme' />
           </div>
         ))}
       </div>

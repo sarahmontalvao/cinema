@@ -1,10 +1,9 @@
 export interface Filme {
     id: number;
-    titulo: string;
-    genero: string;
-    ano: number;
+    title: string;
+    release_date: number;
     diretor: string;
-    descricao: string;
-    imagem_url: string;
-    imagens_background: string;
+    overview: string;
+    poster_path: string;
+    
   }

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import buscarFilmes from "./script.tsx";
 
 import Header from './componentes/header'
 import Index from './pages/index.tsx'
@@ -22,15 +21,23 @@ function App() {
 
   const [filmes, setFilmes] = useState([])
 
-  useEffect(()=>{
-    buscarFilmes()
-    .then(data => {
-      setFilmes(data);
-    })
-    .catch(error => {
-      console.error('Erro ao buscar filmes:', error);
-    });
-}, []);
+  const moviesUrl = import.meta.env.VITE_API;
+  const apiKey = import.meta.env.VITE_API_KEY;
+
+
+
+const getFilms = async (url: string) =>{
+  const res = await fetch(url);
+  const data = await res.json()
+ setFilmes(data.results)
+};
+
+useEffect(()=>{
+  const filmsUrl = `${moviesUrl}top_rated?api_key=${apiKey}&language=pt-br`;
+
+    getFilms(filmsUrl)
+    
+},[])
 
 
   return (
