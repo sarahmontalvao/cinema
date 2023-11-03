@@ -32,7 +32,7 @@ return (
 
 </div>
 <div className="logo">
-   <a href="#"><img src="./img/tickets-logo.png" alt="cinema logo" />
+   <a href="#"><img src="/img/tickets-logo.png" alt="cinema logo" />
    </a> 
 </div>
 <div className="FooterAbout ">

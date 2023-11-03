@@ -33,7 +33,7 @@ const Header : React.FC<Props> = ({ filmes }) => {
 
   return (
     <div className="menu">
-       <Link to="/"> <div className='logo'><img src="./img/tickets-logo.png" alt="cinema logo" /></div></Link>
+       <Link to="/"> <div className='logo'><img src="/img/tickets-logo.png" alt="cinema logo" /></div></Link>
      
 
       <ul className='perfil'>
